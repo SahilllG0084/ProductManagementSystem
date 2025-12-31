@@ -1,7 +1,6 @@
 package com.cjc.app;
 
 import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -9,13 +8,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-
 import com.cjc.app.model.Product;
 import com.cjc.app.repository.ProductRepository;
 
 @SpringBootApplication
 public class Application {
-
+    
 	public static void main(String[] args) {
 		
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
@@ -39,7 +37,7 @@ public class Application {
 
 	private static void sortingInAsc(ProductRepository productRepository) {
 		
-		//// Sorting :Sort According to price
+		//// Sorting in ascending order According to price
 		
 		Sort sort = Sort.by("price");
 		
@@ -61,5 +59,4 @@ public class Application {
 		
 		list.forEach(pr -> System.out.println(pr));
 	}
-
 }
